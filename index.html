@@ -10,6 +10,18 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.button-grid {
+			  display: grid;
+			  grid-template-columns: repeat(2, auto);
+			  gap: 1rem;
+			  justify-content: start;
+			}
+		
+			.button-grid .actions {
+			  margin: 0;
+			}
+		  </style>
 	</head>
 	<body class="is-preload">
 
@@ -38,20 +50,21 @@
 							<!-- <li><a href="#" class="button">Learn More</a></li> -->
 						</ul>
 
-						<ul class="actions">
-							<li><a href="guideline.html" class="button">Guideline</a></li>
-						  </ul>
-
-						<ul class="actions">
-							<li><a href="checkpoints.html" class="button">Checkpoints</a></li>
-						  </ul>
-						<ul class="actions">
-							<li><a href="dataset.html" class="button">Dataset</a></li>
-						  </ul>
-						
-						  <ul class="actions">
-							<li><a href="article.html" class="button">Article</a></li>
-						  </ul>
+						<div class="button-grid">
+							<ul class="actions">
+							  <li><a href="guideline.html" class="button">Guideline</a></li>
+							</ul>
+							<ul class="actions">
+							  <li><a href="checkpoints.html" class="button">Checkpoints</a></li>
+							</ul>
+							<ul class="actions">
+							  <li><a href="dataset.html" class="button">Dataset</a></li>
+							</ul>
+							<ul class="actions">
+							  <li><a href="article.html" class="button">Article</a></li>
+							</ul>
+						  </div>
+						  
 					</section>
 
 				<!-- Two -->
