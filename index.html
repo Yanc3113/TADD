@@ -17,6 +17,14 @@
 			  gap: 1rem;
 			  justify-content: start;
 			}
+			@media (max-width: 768px) {
+				.button-grid {
+				  grid-template-columns: 1fr; /* 单列 */
+				  justify-items: center;      /* 居中对齐按钮 */
+				  justify-content: center;    /* 居中整个 grid */
+				}
+			  }
+			  
 		
 			.button-grid .actions {
 			  margin: 0;
