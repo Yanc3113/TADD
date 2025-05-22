@@ -1,0 +1,2 @@
+.mp4 filter=lfs diff=lfs merge=lfs -text
+dataset/Video/Platform/chat_block_blindway/*.mp4 filter=lfs diff=lfs merge=lfs -text
