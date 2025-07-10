@@ -52,7 +52,41 @@
                         </h3>
                     </header>
                     <p>对于视频分类的benchmark，首先需要下载仓库：https://github.com/open-mmlab/mmaction2.git，进入该仓库的configs/recognition/swin或者configs/recognition/uniformerv2，选择所需的型号(比如base或者large)对应的配置文件，修改配置文件内参数。<br />
-					参数修改需要包含data_root等地址，如果需要测试我们的权重则需要修改pretrained 的checkpoint地址。对于不同的测试指标需要对应不同的配置文件。配置文件的地址在本项目仓库</p>
+					参数修改需要包含data_root等地址，如果需要测试我们的权重则需要修改pretrained 的checkpoint地址。对于不同的测试指标需要对应不同的配置文件。视频分类的配置文件的地址在本项目仓库，跳转链接如下：</p>
+					
+					进入到MoLo的主仓库位置
+					cd /root/MoLo-master
+					
+					然后打开终端运行
+					python runs/run.py --cfg /root/MoLo-master/configs/projects/MoLo/ucf101/3way_1shot_car_rgb.yaml
+
+					这里的yaml文件可以参考TADD仓库 链接：
+                        </p>
+                    <ul class="actions">
+                        <!-- <li><a href="#" class="button">Learn More</a></li> -->
+                    </ul>
+
+                    <ul class="actions">
+                        <li><a href="index.html" class="button">Home</a></li>
+                      </ul>
+                      
+                </section>
+
+				<section id="two">
+                    <header class="major">
+                        <h3>Video Classification<br />
+                        </h3>
+                    </header>
+                    <p>对于少样本分类的benchmark，首先需要下载仓库：https://github.com/alibaba-mmai-research/MoLo.git和https://github.com/OldStone0124/Knowledge-Prompting-for-FSAR.git，进入该仓库的configs/recognition/swin或者configs/recognition/uniformerv2，选择所需的型号(比如base或者large)对应的配置文件，修改配置文件内参数。<br />
+					参数修改需要包含data_root等地址，如果需要测试我们的权重则需要修改pretrained 的checkpoint地址。对于不同的测试指标需要对应不同的配置文件。视频分类的配置文件的地址在本项目仓库，跳转链接如下：</p>
+					
+					进入到MoLo的主仓库位置
+					cd /root/MoLo-master
+					
+					然后打开终端运行
+					python runs/run.py --cfg /root/MoLo-master/configs/projects/MoLo/ucf101/3way_1shot_car_rgb.yaml
+
+					这里的yaml文件可以参考TADD仓库 链接：
                         </p>
                     <ul class="actions">
                         <!-- <li><a href="#" class="button">Learn More</a></li> -->
