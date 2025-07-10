@@ -27,74 +27,67 @@
 			<div id="main">
 
 				<!-- One -->
-                <section id="one">
-                    <header class="major">
-                        <h2>Guideline<br />
-                            
-                        </h2>
-                    </header>
-                    <p>Guideline for Video Classification is shown.  More details will be updated soon&gt;_&lt;<br />
-					All pretrained checkpoints can be found in the button below.</p>
-                        </p>
-                    <ul class="actions">
-                        <li><a href="checkpoints.html" class="button">Checkpoint</a></li>
-                    </ul>
-
-                    <ul class="actions">
-                        <li><a href="index.html" class="button">Home</a></li>
-                      </ul>
-                      
-                </section>
-
+				<section id="one">
+					<header class="major">
+						<h2>Guideline<br />
+						</h2>
+					</header>
+					<p>Welcome to the TADD repository &gt;_&lt; <br />
+						All pretrained checkpoints are available through the button below.
+					</p>
+					<ul class="actions">
+						<li><a href="checkpoints.html" class="button">Checkpoint</a></li>
+					</ul>
+					<ul class="actions">
+						<li><a href="index.html" class="button">Home</a></li>
+					</ul>
+				</section>
+				
 				<section id="two">
-                    <header class="major">
-                        <h3>Video Classification<br />
-                        </h3>
-                    </header>
-                    <p>对于视频分类的benchmark，首先需要下载仓库：https://github.com/open-mmlab/mmaction2.git，进入该仓库的configs/recognition/swin或者configs/recognition/uniformerv2，选择所需的型号(比如base或者large)对应的配置文件，修改配置文件内参数。<br />
-					参数修改需要包含data_root等地址，如果需要测试我们的权重则需要修改pretrained的checkpoint地址。对于不同的测试指标需要对应不同的配置文件。视频分类的配置文件的地址在本项目仓库，跳转链接如下：<br />
-					我们鼓励开发者设置新的benchmark，本仓库内的配置文件可以按需修改。我们提供的checkpoints的</p>
-					
-					
-
-					这里的yaml文件可以参考TADD仓库 链接：
-                        </p>
-                    <ul class="actions">
-                        <!-- <li><a href="#" class="button">Learn More</a></li> -->
-                    </ul>
-
-                    <ul class="actions">
-                        <li><a href="index.html" class="button">Home</a></li>
-                      </ul>
-                      
-                </section>
-
+					<header class="major">
+						<h3>Video Classification Benchmark<br />
+						</h3>
+					</header>
+					<p>
+						To perform benchmarks for video classification, first clone the following repository: <a href="https://github.com/open-mmlab/mmaction2.git">mmaction2</a>. 
+						Navigate to the directory <code>configs/recognition/swin</code> or <code>configs/recognition/uniformerv2</code>, and select the appropriate configuration file based on your model variant (e.g., base or large). Adjust the parameters within the selected YAML configuration file accordingly.<br />
+						
+						Critical parameters requiring adjustment include <code>data_root</code> paths. If you're evaluating our pretrained checkpoints, update the <code>pretrained</code> field in the official YAML file with the corresponding checkpoint URL provided by our repository.<br />
+						
+						Different evaluation metrics correspond to different configuration files. The configuration files for video classification benchmarks are stored within this project's repository. Please access them through the provided links.<br />
+						
+						We highly encourage developers to create new benchmarks by customizing our existing configuration files as needed.
+					</p>
+				</section>
+				
 				<section id="three">
-                    <header class="major">
-                        <h3>Few-shot Learning<br />
-                        </h3>
-                    </header>
-                    <p>对于少样本分类的benchmark，首先需要下载仓库：https://github.com/alibaba-mmai-research/MoLo.git和https://github.com/OldStone0124/Knowledge-Prompting-for-FSAR.git，进入该仓库的configs/recognition/swin或者configs/recognition/uniformerv2，选择所需的型号(比如base或者large)对应的配置文件，修改配置文件内参数。<br />
-					参数修改需要包含data_root等地址，如果需要测试我们的权重则需要修改pretrained 的checkpoint地址。对于不同的测试指标需要对应不同的配置文件。视频分类的配置文件的地址在本项目仓库，跳转链接如下：</p>
-					
-					进入到MoLo的主仓库位置
-					cd /root/MoLo-master
-					
-					然后打开终端运行
-					python runs/run.py --cfg /root/MoLo-master/configs/projects/MoLo/ucf101/3way_1shot_car_rgb.yaml
-
-					这里的yaml文件可以参考TADD仓库 链接：
-                        </p>
-                    <ul class="actions">
-                        <!-- <li><a href="#" class="button">Learn More</a></li> -->
-                    </ul>
-
-                    <ul class="actions">
-                        <li><a href="index.html" class="button">Home</a></li>
-                      </ul>
-                      
-                </section>
-
+					<header class="major">
+						<h3>Few-shot Learning Benchmark<br />
+						</h3>
+					</header>
+					<p>
+						To conduct benchmarks for few-shot classification tasks, begin by cloning the following repositories: 
+						<a href="https://github.com/alibaba-mmai-research/MoLo.git">MoLo</a> and 
+						<a href="https://github.com/OldStone0124/Knowledge-Prompting-for-FSAR.git">Knowledge Prompting for FSAR</a>.<br />
+						
+						After cloning, ensure critical parameters such as <code>data_root</code> are accurately configured. For evaluating our pretrained checkpoints, update the <code>pretrained</code> parameter within the YAML configuration files. Note that different evaluation metrics necessitate distinct configuration setups.<br />
+						
+						Refer to our repository for detailed configuration file examples, accessible via: <a href="https://github.com/Yanc3113/TADD/tree/main/benchmark/FewShot/MoLo/yaml">Few-Shot Configuration Files</a>.<br />
+						
+						Navigate to the main directory of MoLo with the command:<br />
+						<code>cd /root/MoLo-master</code><br />
+						
+						Then execute the benchmarking script by running:<br />
+						<code>python runs/run.py --cfg configs/projects/MoLo/ucf101/3way_1shot_car_rgb.yaml</code>
+					</p>
+					<ul class="actions">
+						<!-- <li><a href="#" class="button">Learn More</a></li> -->
+					</ul>
+					<ul class="actions">
+						<li><a href="index.html" class="button">Home</a></li>
+					</ul>
+				</section>
+				
 
 				<!-- Three -->
 					<!-- <section id="three">
