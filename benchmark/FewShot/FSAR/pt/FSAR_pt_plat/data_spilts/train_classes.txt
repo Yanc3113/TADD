@@ -1,0 +1,9 @@
+phone_block_blindway
+lean_railing
+fire_not_yellow_zone
+fire_askew
+fire_miss
+quarrel
+run
+missing_drink
+chat_block_way

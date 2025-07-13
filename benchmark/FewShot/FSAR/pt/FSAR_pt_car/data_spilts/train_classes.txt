@@ -1,0 +1,9 @@
+Obstructing_Driver's_View
+Not_Wearing_Seatbelt
+Front_Passenger_Leaning_Out_of_Window
+Back_Seat_Quarrel
+Back_Seat_Passenger_Leaning_Out_of_Window
+Overloading
+Fallen_Package 
+Dropped_Earphones
+Dropped_Phone
