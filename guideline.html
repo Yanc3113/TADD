@@ -49,15 +49,70 @@
 						</h3>
 					</header>
 					<p>
-						To perform benchmarks for video classification, first clone the following repository: <a href="https://github.com/open-mmlab/mmaction2.git">mmaction2</a>. 
-						Navigate to the directory <code>configs/recognition/swin</code> or <code>configs/recognition/uniformerv2</code>, and select the appropriate configuration file based on your model variant (e.g., base or large). Adjust the parameters within the selected YAML configuration file accordingly.<br />
+						To evaluate video classification models on the TADD dataset, please follow the official steps below.
+						</p>
 						
-						Critical parameters requiring adjustment include <code>data_root</code> paths. If you're evaluating our pretrained checkpoints, update the <code>pretrained</code> field in the official YAML file with the corresponding checkpoint URL provided by our repository.<br />
+						<ol>
+						  <li>
+							<strong>Clone the mmaction2 repository</strong><br />
+							<code>git clone https://github.com/open-mmlab/mmaction2.git</code>
+						  </li><br />
 						
-						Different evaluation metrics correspond to different configuration files. The configuration files for video classification benchmarks are stored within this project's repository. Please access them through the provided links.<br />
+						  <li>
+							<strong>Prepare the environment</strong><br />
+							Install the required dependencies following the mmaction2 documentation (compatible with PyTorch, MMEngine, etc.).
+						  </li><br />
 						
-						We highly encourage developers to create new benchmarks by customizing our existing configuration files as needed.
-					</p>
+						  <li>
+							<strong>Download and select configuration files</strong><br />
+							We use the official Swin-based recognition configs released in 2025. The supported base YAMLs are:
+							<ul>
+							  <li><code>swin_base_p244_w877_in1k_pre_8xb8_amp_32x2x1_30e_kinetics400_rgb.py</code></li>
+							  <li><code>swin_large_p244_w877_in22k_pre_8xb8_amp_32x2x1_30e_kinetics400_rgb.py</code></li>
+							  <li><code>swin_tiny_p244_w877_in1k_pre_8xb8_amp_32x2x1_30e_kinetics400_rgb.py</code></li>
+							</ul>
+							These can be found under <code>configs/recognition/swin</code> in mmaction2.
+						  </li><br />
+						
+						  <li>
+							<strong>Modify configuration for TADD</strong><br />
+							Within the selected YAML file, please update:
+							<ul>
+							  <li><code>data_root</code>: Set to your local TADD dataset directory.</li>
+							  <li><code>ann_file_train</code> / <code>ann_file_val</code>: Use the official TADD annotation files listed below.</li>
+							  <li><code>pretrained</code>: If using our weights, point to the correct checkpoint from the URL below.</li>
+							</ul>
+						  </li><br />
+						
+						  <li>
+							<strong>Download pretrained weights (optional)</strong><br />
+							You may use the pretrained weights provided on our project website:<br />
+							<a href="https://yanc3113.github.io/TADD/checkpoints.html" target="_blank">https://yanc3113.github.io/TADD/checkpoints.html</a><br />
+							These checkpoints are compatible with the Swin-based configurations listed above.
+						  </li><br />
+						
+						  <li>
+							<strong>Use TADD annotation files</strong><br />
+							Official video-level annotation files (train/val) are hosted on GitHub:<br />
+							<a href="https://github.com/Yanc3113/TADD/tree/main/benchmark/VideoClassification/Annotation4VideoClassification" target="_blank">
+							  https://github.com/Yanc3113/TADD/.../Annotation4VideoClassification
+							</a><br />
+							These include labels for all actions, objects, and scenes within TADD. Developers are encouraged to customize the labels based on their task needs—for example, focusing only on specific action types or object categories.
+						  </li><br />
+						
+						  <li>
+							<strong>Launch training or evaluation</strong><br />
+							Use the following command to start evaluation:<br />
+							<code>bash tools/dist_test.sh &lt;config_file&gt; &lt;checkpoint_path&gt; &lt;num_gpus&gt; --eval top_k_accuracy</code><br />
+							Or for training:<br />
+							<code>bash tools/dist_train.sh &lt;config_file&gt; &lt;num_gpus&gt;</code>
+						  </li><br />
+						</ol>
+						
+						<p>
+						We encourage the community to build custom video classification benchmarks based on TADD by adapting the YAML files and annotation formats.
+						</p>
+						
 				</section>
 				
 				<section id="three">
@@ -66,20 +121,89 @@
 						</h3>
 					</header>
 					<p>
-						To conduct benchmarks for few-shot classification tasks, begin by cloning the following repositories: 
-						<a href="https://github.com/alibaba-mmai-research/MoLo.git">MoLo</a> and 
-						<a href="https://github.com/OldStone0124/Knowledge-Prompting-for-FSAR.git">Knowledge Prompting for FSAR</a>.<br />
+						To conduct few-shot action recognition (FSAR) benchmarks on the TADD dataset, please follow the official instructions below:
+						</p>
 						
-						After cloning, ensure critical parameters such as <code>data_root</code> are accurately configured. For evaluating our pretrained checkpoints, update the <code>pretrained</code> parameter within the YAML configuration files. Note that different evaluation metrics necessitate distinct configuration setups.<br />
+						<ol>
+						  <li>
+							<strong>Clone the baseline repositories</strong><br />
+							We support benchmarking with the following few-shot learning frameworks:
+							<ul>
+							  <li><a href="https://github.com/alibaba-mmai-research/MoLo.git" target="_blank">MoLo (Alibaba)</a>: Transformer-based few-shot learner with motion-level modeling.</li>
+							  <li><a href="https://github.com/OldStone0124/Knowledge-Prompting-for-FSAR.git" target="_blank">Knowledge Prompting for FSAR</a>: Meta-learning framework with semantic prompting and temporal modeling.</li>
+							</ul>
+						  </li><br />
 						
-						Refer to our repository for detailed configuration file examples, accessible via: <a href="https://github.com/Yanc3113/TADD/tree/main/benchmark/FewShot/MoLo/yaml">Few-Shot Configuration Files</a>.<br />
+						  <li>
+							<strong>Frame rate and temporal settings</strong><br />
+							The TADD dataset is provided at a standard <strong>30 FPS</strong> (frames per second). This is directly related to the following key configuration parameters in YAML:
+							<ul>
+							  <li><code>clip_len</code>: Number of frames per video clip (e.g., 8, 16, 32)</li>
+							  <li><code>frame_interval</code>: Interval between consecutive frames (e.g., 1, 2)</li>
+							  <li><code>num_segments</code>: Used for TSN-style temporal sampling (optional)</li>
+							</ul>
+							For example, with <code>clip_len: 16</code> and <code>frame_interval: 2</code>, the total clip covers ≈ 1.0 second of real time.
+						  </li><br />
 						
-						Navigate to the main directory of MoLo with the command:<br />
-						<code>cd /root/MoLo-master</code><br />
+						  <li>
+							<strong>Reference YAML configuration files</strong><br />
+							We provide officially curated few-shot configuration files tailored for TADD:
+							<ul>
+							  <li><a href="https://github.com/Yanc3113/TADD/tree/main/benchmark/FewShot/MoLo/yaml" target="_blank">MoLo YAMLs</a> – Focused on 3-way / 5-way / N-way × K-shot settings</li>
+							  <li><a href="https://github.com/Yanc3113/TADD/tree/main/benchmark/FewShot/FSAR/yaml" target="_blank">FSAR YAMLs</a> – Designed for semantic-prompt-based learning</li>
+							</ul>
+							Each YAML file includes key parameters such as:
+							<ul>
+							  <li><code>n_shots</code>: Number of support samples per class (e.g., 1, 5)</li>
+							  <li><code>n_ways</code>: Number of classes per episode (e.g., 3, 5)</li>
+							  <li><code>query_per_class</code>: Number of query samples used per class for evaluation</li>
+							  <li><code>max_epochs</code>: Number of training iterations (optional)</li>
+							  <li><code>video_format</code>: Either <code>rgb</code> or <code>rgb+depth</code> for TADD</li>
+							  <li><code>num_workers</code>: Number of workers per dataloader</li>
+							  <li><code>backbone</code>: e.g., ViT, MoLo, or TSN</li>
+							</ul>
+							All YAMLs are fully compatible with TADD’s frame directory and label format.
+						  </li><br />
 						
-						Then execute the benchmarking script by running:<br />
-						<code>python runs/run.py --cfg configs/projects/MoLo/ucf101/3way_1shot_car_rgb.yaml</code>
-					</p>
+						  <li>
+							<strong>Customize your own few-shot task</strong><br />
+							The annotation files used for training and evaluation are located at:<br />
+							<a href="https://github.com/Yanc3113/TADD/tree/main/benchmark/VideoClassification/Annotation4VideoClassification" target="_blank">
+							  https://github.com/Yanc3113/TADD/.../Annotation4VideoClassification
+							</a><br />
+							These include full video-to-label mappings. You may easily construct custom tasks by:
+							<ul>
+							  <li>Filtering labels by object category (e.g., bags, suitcases, trolleys)</li>
+							  <li>Restricting action types (e.g., sitting, falling, running)</li>
+							  <li>Isolating specific camera viewpoints (platform vs. cabin)</li>
+							</ul>
+						  </li><br />
+						
+						  <li>
+							<strong>Run the benchmark</strong><br />
+							For MoLo, navigate to the root directory and run:
+							<br />
+							<code>cd /root/MoLo-master</code><br />
+							<code>python runs/run.py --cfg configs/projects/MoLo/ucf101/3way_1shot_car_rgb.yaml</code><br />
+							Make sure the paths in the YAML are set to your local TADD directory.
+						  </li><br />
+						
+						  <li>
+							<strong>Hardware & environment</strong><br />
+							All experiments were conducted using:
+							<ul>
+							  <li><strong>4 × NVIDIA A100 (L20)</strong> GPUs</li>
+							  <li>CUDA ≥ 11.6, PyTorch ≥ 1.12</li>
+							  <li>Python ≥ 3.8</li>
+							</ul>
+							Multi-GPU training is supported by MoLo via <code>torch.distributed.launch</code> or <code>torchrun</code> interfaces.
+						  </li><br />
+						</ol>
+						
+						<p>
+						We encourage the community to design custom few-shot splits or meta-datasets using the flexible TADD label structure and provided baselines.
+						</p>
+						
 					<ul class="actions">
 						<!-- <li><a href="#" class="button">Learn More</a></li> -->
 					</ul>
