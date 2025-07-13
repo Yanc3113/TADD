@@ -166,6 +166,84 @@
 						  </li><br />
 						
 						  <li>
+							<strong>Precomputed features and custom generation</strong><br />
+							Due to GitHub storage limitations, the raw image dataset extracted from TADD videos exceeds <strong>300GB</strong> and is not hosted in this repository. Developers must locally extract video frames and optionally generate feature `.pt` files for few-shot tasks.
+						  
+							<ul>
+							  <li>
+								<strong>Precomputed proposal-level features (<code>proposals_fea_pth</code>)</strong><br />
+								- Cabin:
+								<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FewShot/FSAR/pt/FSAR_pt_car/clip_related/car_combined_proposals_fea.pt" target="_blank">
+								  car_combined_proposals_fea.pt
+								</a><br />
+								- Platform:
+								<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FewShot/FSAR/pt/FSAR_pt_plat/clip_related/plat_combined_proposals_fea.pt" target="_blank">
+								  plat_combined_proposals_fea.pt
+								</a>
+							  </li><br />
+						  
+							  <li>
+								<strong>CLIP region-level visual features (<code>CLIP_visual_fea_reg</code>)</strong><br />
+								- Cabin:
+								<a href="https://github.com/Yanc3113/TADD/tree/main/benchmark/FewShot/FSAR/pt/FSAR_pt_car/clip_related/VitOutput_RGB_20s_frame_fps_5" target="_blank">
+								  VitOutput_RGB_20s_frame_fps_5
+								</a><br />
+								- Platform:
+								<a href="https://github.com/Yanc3113/TADD/tree/main/benchmark/FewShot/FSAR/pt/FSAR_pt_plat/clip_related/VitOutput_plat" target="_blank">
+								  VitOutput_plat
+								</a>
+							  </li><br />
+						  
+							  <li>
+								<strong>Custom feature generation</strong><br />
+								You may generate your own `.pt` feature files by using the provided script:<br />
+								<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FewShot/FSAR/pt/i2pt.py" target="_blank">
+								  i2pt.py
+								</a><br />
+								This script uses CLIP to extract proposal-level and region-level visual features from image frames.
+							  </li><br />
+						  
+							  <li>
+								<strong>Video-to-frame conversion (required)</strong><br />
+								Since raw frame images are not provided due to size constraints (>300GB), please use the following shell script to extract frames at 5 FPS using <code>ffmpeg</code>. This step is required before running <code>i2pt.py</code>:
+								<pre><code>IN_DATA_DIR="/path/to/your/raw/videos/"
+						  OUT_DATA_DIR="/path/to/output/frames_fps5/"
+						  
+						  if [[ ! -d "${OUT_DATA_DIR}" ]]; then
+							  echo "${OUT_DATA_DIR} not exist. Create it."
+							  mkdir -p "${OUT_DATA_DIR}"
+						  fi
+						  
+						  for category_dir in "${IN_DATA_DIR}"*/; do
+							  category_name=$(basename "${category_dir}")
+							  for video in "${category_dir}"*; do
+								  if [[ -f "${video}" ]]; then  
+									  video_name=${video##*/}
+									  if [[ $video_name == *.webm ]]; then
+										  video_name=${video_name:0:-5}
+									  elif [[ $video_name == *.mp4 ]]; then
+										  video_name=${video_name:0:-4}
+									  elif [[ $video_name == *.avi ]]; then
+										  video_name=${video_name:0:-4}
+									  else
+										  echo "error: ${video_name}"
+										  continue
+									  fi
+									  out_video_dir="${OUT_DATA_DIR}/${category_name}/${video_name}"
+									  mkdir -p "${out_video_dir}"
+									  ffmpeg -i "${video}" -vf fps=5 "${out_video_dir}/frame_%06d.png"
+								  fi
+							  done
+						  done</code></pre>
+							  </li>
+							</ul>
+						  
+							<p>
+							  <strong>Note:</strong> If you are using our provided `.pt` features, frame extraction is not required. However, for custom tasks or updated CLIP models, we strongly encourage generating your own features from extracted frames.
+							</p>
+						  </li><br />
+						  
+						  <li>
 							<strong>Customize your own few-shot task</strong><br />
 							The annotation files used for training and evaluation are located at:<br />
 							<a href="https://github.com/Yanc3113/TADD/tree/main/benchmark/VideoClassification/Annotation4VideoClassification" target="_blank">
