@@ -45,130 +45,367 @@
 						  
 					</section>
 
-				
-				<!-- Four -->
-				
-					<!-- <section id="four">
-						<h2>Elements</h2>
-
 						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
-
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
+							<h4>Abnormal Detection Model Evaluation</h4>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Method</th>
+											<th>Test\Train</th>
+											<th>Cabin<br>(All)</th>
+											<th>Cabin<br>(Split)</th>
+											<th>Platform<br>(All)</th>
+											<th>Platform<br>(L-A)</th>
+											<th>Platform<br>(Split)</th>
+											<th>TADD<br>(All)</th>
+											<th>TADD<br>(L-A)</th>
+											<th>TADD<br>(Split)</th>     
+										</tr>
+									</thead>  
+									<tbody>
+										<tr>
+											<td rowspan="3">SlowOnly-R50</td>
+											<td>All</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/cabin_abnormal_detection_slowonly-r50/cabin_abnormal_detection_slowonly-r50.pth">85.50</a></td>
+											<td>-</td>
+											<td style="white-space: normal;">70.25<br />
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_TrainAll_TestAll_Epoch50.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_TrainAll_TestAll_Epoch50.002">II  </a>
+											</td>
+											<td>60.10
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td>-</td>
+											<td>75.80
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td>80.20
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td>Action</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Cabin_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Cabin_TrainAll_TestAll_Epoch50.pth">87.30</a></td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Cabin_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowOnlyR50_Cabin_TrainAction_TestAction_Epoch50.pth">85.90</a></td>
+											<td style="white-space: normal;">72.40<br />
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_TrainAll_TestAll_Epoch50.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_TrainAll_TestAll_Epoch50.002">II  </a>
+											</td>
+											<td>65.50
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td>70.60
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_TrainAction_TestAction_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_TrainAction_TestAction_Epoch50.7z.002">II  </a>
+											</td>
+											<td>82.10
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td>86.70
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_TrainAction_TestAction_Epoch50.pth">78.90</a></td>
+										</tr>
+										<tr>
+											<td>Item</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Cabin_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Cabin_TrainAll_TestAll_Epoch50.pth">50.20</a></td>
+											<td>45.80
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Cabin_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowOnlyR50_Cabin_TrainItem_TestItem_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Cabin_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowOnlyR50_Cabin_TrainItem_TestItem_Epoch50.7z.002">II  </a>
+											</td>
+											<td style="white-space: normal;">68.90<br />
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_TrainAll_TestAll_Epoch50.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_TrainAll_TestAll_Epoch50.002">II  </a>
+											</td>
+											<td>42.30
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_Platform_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowOnlyR50_Platform_TrainItem_TestItem_Epoch50.pth">48.70</a></td>
+											<td>46.50
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td>57.90
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowOnlyR50_TADD_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowOnlyR50_TADD_TrainItem_TestItem_Epoch50.pth">55.60</a></td>
+										</tr>
+										<tr>
+											<td rowspan="3">SlowFast-R50</td>
+											<td>All</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Cabin_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Cabin_TrainAll_TestAll_Epoch50.pth">88.70</a></td>
+											<td>-</td>
+											<td style="white-space: normal;">73.40<br />
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Platform_TrainAll_TestAll_Epoch50.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Platform_TrainAll_TestAll_Epoch50.002">II  </a>
+											</td>
+											<td>63.20
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Platform_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Platform_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td>-</td>
+											<td>78.90
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_TADD_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_TADD_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td>83.50
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_TADD_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_TADD_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td>Action</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Cabin_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Cabin_TrainAll_TestAll_Epoch50.pth">90.10</a></td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Cabin_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowFastR50_Cabin_TrainAction_TestAction_Epoch50.pth">88.70</a></td>
+											<td style="white-space: normal;">75.60<br />
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Platform_TrainAll_TestAll_Epoch50.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Platform_TrainAll_TestAll_Epoch50.002">II  </a>
+											</td>
+											<td>68.90
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Platform_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Platform_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td>73.80
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowFastR50_Platform_TrainAction_TestAction_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowFastR50_Platform_TrainAction_TestAction_Epoch50.7z.002">II  </a>
+											</td>
+											<td>85.20
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_TADD_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_TADD_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td>89.30
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_TADD_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_TADD_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowFastR50_TADD_TrainAction_TestAction_Epoch50.pth">80.50</a></td>
+										</tr>
+										<tr>
+											<td>Item</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Cabin_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Cabin_TrainAll_TestAll_Epoch50.pth">52.40</a></td>
+											<td>47.60
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Cabin_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowFastR50_Cabin_TrainItem_TestItem_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Cabin_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowFastR50_Cabin_TrainItem_TestItem_Epoch50.7z.002">II  </a>
+											</td>
+											<td style="white-space: normal;">71.10<br />
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Platform_TrainAll_TestAll_Epoch50.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Platform_TrainAll_TestAll_Epoch50.002">II  </a>
+											</td>
+											<td>44.50
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Platform_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_Platform_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_Platform_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowFastR50_Platform_TrainItem_TestItem_Epoch50.pth">50.90</a></td>
+											<td>48.70
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_TADD_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_TADD_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td>60.10
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_TADD_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR50_TADD_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+											</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR50_TADD_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowFastR50_TADD_TrainItem_TestItem_Epoch50.pth">57.80</a></td>
+										</tr>
+										<tr>
+											<td rowspan="3">SlowFast-R101</td>
+											<td>All</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Cabin_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Cabin_TrainAll_TestAll_Epoch50.pth">90.30</a></td>
+											<td>-</td>
+											<td style="white-space: normal;">76.80<br />
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50.003">III </a>
+											</td>
+											<td>66.40
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td>-</td>
+											<td>82.10
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td>85.70
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td>Action</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Cabin_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Cabin_TrainAll_TestAll_Epoch50.pth">92.50</a></td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Cabin_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowFastR101_Cabin_TrainAction_TestAction_Epoch50.pth">91.10</a></td>
+											<td style="white-space: normal;">78.90<br />
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50.003">III </a>
+											</td>
+											<td>71.20
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td>76.00
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainAction_TestAction_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainAction_TestAction_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainAction_TestAction_Epoch50.7z.003">III </a>
+											</td>
+											<td>87.40
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td>91.50
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_TrainAction_TestAction_Epoch50/AbnormalDetection_SlowFastR101_TADD_TrainAction_TestAction_Epoch50.pth">82.70</a></td>
+										</tr>
+										<tr>
+											<td>Item</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Cabin_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Cabin_TrainAll_TestAll_Epoch50.pth">54.80</a></td>
+											<td>49.20
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Cabin_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowFastR101_Cabin_TrainItem_TestItem_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Cabin_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowFastR101_Cabin_TrainItem_TestItem_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Cabin_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowFastR101_Cabin_TrainItem_TestItem_Epoch50.7z.003">III </a>
+											</td>
+											<td style="white-space: normal;">74.30<br />
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainAll_TestAll_Epoch50.003">III </a>
+											</td>
+											<td>46.70
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_Platform_L-A_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_Platform_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowFastR101_Platform_TrainItem_TestItem_Epoch50.pth">53.10</a></td>
+											<td>50.90
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td>62.30
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_SlowFastR101_TADD_L-A_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_SlowFastR101_TADD_TrainItem_TestItem_Epoch50/AbnormalDetection_SlowFastR101_TADD_TrainItem_TestItem_Epoch50.pth">60.20</a></td>
+										</tr>
+										<tr>
+											<td rowspan="3">ViT-B</td>
+											<td>All</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Cabin_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Cabin_TrainAll_TestAll_Epoch50.pth">87.90</a></td>
+											<td>-</td>
+											<td style="white-space: normal;">74.60<br />
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50.003">III </a>
+											</td>
+											<td>64.80
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td>-</td>
+											<td>80.30
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td>84.10
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td>Action</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Cabin_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Cabin_TrainAll_TestAll_Epoch50.pth">89.70</a></td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Cabin_TrainAction_TestAction_Epoch50/AbnormalDetection_ViT-B_Cabin_TrainAction_TestAction_Epoch50.pth">88.30</a></td>
+											<td style="white-space: normal;">77.20<br />
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50.003">III </a>
+											</td>
+											<td>70.10
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td>74.90
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainAction_TestAction_Epoch50/AbnormalDetection_ViT-B_Platform_TrainAction_TestAction_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainAction_TestAction_Epoch50/AbnormalDetection_ViT-B_Platform_TrainAction_TestAction_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainAction_TestAction_Epoch50/AbnormalDetection_ViT-B_Platform_TrainAction_TestAction_Epoch50.7z.003">III </a>
+											</td>
+											<td>86.50
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td>90.20
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_TrainAction_TestAction_Epoch50/AbnormalDetection_ViT-B_TADD_TrainAction_TestAction_Epoch50.pth">81.90</a></td>
+										</tr>
+										<tr>
+											<td>Item</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Cabin_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Cabin_TrainAll_TestAll_Epoch50.pth">53.60</a></td>
+											<td>48.40
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Cabin_TrainItem_TestItem_Epoch50/AbnormalDetection_ViT-B_Cabin_TrainItem_TestItem_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Cabin_TrainItem_TestItem_Epoch50/AbnormalDetection_ViT-B_Cabin_TrainItem_TestItem_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Cabin_TrainItem_TestItem_Epoch50/AbnormalDetection_ViT-B_Cabin_TrainItem_TestItem_Epoch50.7z.003">III </a>
+											</td>
+											<td style="white-space: normal;">72.50<br />
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_TrainAll_TestAll_Epoch50.003">III </a>
+											</td>
+											<td>45.90
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_Platform_L-A_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_Platform_TrainItem_TestItem_Epoch50/AbnormalDetection_ViT-B_Platform_TrainItem_TestItem_Epoch50.pth">51.30</a></td>
+											<td>49.10
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td>61.50
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50.7z.001">I  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50.7z.002">II  </a>
+												<a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50/AbnormalDetection_ViT-B_TADD_L-A_TrainAll_TestAll_Epoch50.7z.003">III </a>
+											</td>
+											<td><a href="https://github.com/Yanc3113/TADD/releases/download/AbnormalDetection_ViT-B_TADD_TrainItem_TestItem_Epoch50/AbnormalDetection_ViT-B_TADD_TrainItem_TestItem_Epoch50.pth">58.40</a></td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button primary small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section> -->
 
-						<section>
 							<h4>Video Classification Model Evaluation</h4>
 							<h5 style="margin-bottom: 1em;">
 								</h5>
 
 							<div class="table-wrapper">
+								<!--插入Video Classification Model Evaluation table这里-->
 								<table>
 								  <thead>
 									<tr>
@@ -759,269 +996,108 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							  
 								  </tbody>
 								</table>
-
-
+								
 
 								<h4>Few-shot Learning Model Evaluation</h4>
 								<div class="table-wrapper">
 									<table>
-									  <thead>
-										<tr>
-										  <th>Method</th>
-										  <th>Way</th>
-										  <th>Cabin<br>(1-shot)</th>
-										  <th>Cabin<br>(3-shot)</th>
-										  <th>Cabin<br>(5-shot)</th>
-										  <th>Platform<br>(1-shot)</th>
-										  <th>Platform<br>(3-shot)</th>
-										  <th>Platform<br>(5-shot)</th>   
-										</tr>
-									  </thead>  
-									  <tbody>
-										<tr>
-										  <td rowspan="2">MoLo</td>
-										  <td>3</td>
-										  <td><a href="">90.72</a></td>
-										  <td>92.73</a></td>
-										  <td>93.03
-											<a href="">I  </a>
-											<a href="">II  </a>
-										  </td>
-										  <td>86.04
+										<thead>
+											<tr>
+												<th>Method</th>
+												<th>Way</th>
+												<th>Cabin<br>(1-shot)</th>
+												<th>Cabin<br>(3-shot)</th>
+												<th>Cabin<br>(5-shot)</th>
+												<th>Platform<br>(1-shot)</th>
+												<th>Platform<br>(3-shot)</th>
+												<th>Platform<br>(5-shot)</th>   
+											</tr>
+										</thead>  
+										<tbody>
+											<tr>
+												<td rowspan="2">MoLo</td>
+												<td>3</td>
+												<td><a href="">90.72</a></td>
+												<td>92.73</a></td>
+												<td>93.03
+													<a href="">I  </a>
+													<a href="">II  </a>
+												</td>
+												<td>86.04
 
-										  </td>  
-										  <td>90.33</a></td>
-										  <td>90.70
-											<a href="">I  </a>
-											<a href="">II  </a>
-										  </td>
+												</td>  
+												<td>90.33</a></td>
+												<td>90.70
+													<a href="">I  </a>
+													<a href="">II  </a>
+												</td>									
 
-										
+											<tr>
+												<td>5</td>
+												<td><a href="">90.04</a></td>
+												<td><a href="">90.06</a></td>
+												<td>91.94
+													<a href="">I  </a>
+													<a href="">II  </a>
+												</td>
+												<td>80.96
+													<a href="">I  </a>
+													<a href="">II  </a>								
+												</td>
+												<td>85.90
+													<a href="">I  </a>
+													<a href="">II  </a>
+												</td>
+												<td>86.53
+													<a href="">I  </a>
+													<a href="">II  </a>
+												</td>
 
-										<tr>
-										  <td>5</td>
-										  <td><a href="">90.04</a></td>
-										  <td><a href="">90.06</a></td>
-										  <td>91.94
-											<a href="">I  </a>
-											<a href="">II  </a>
-										  </td>
-										  <td>80.96
-											<a href="">I  </a>
-											<a href="">II  </a>								
-										  </td>
-										  <td>85.90
-											<a href="">I  </a>
-											<a href="">II  </a>
-										  </td>
-										  <td>86.53
-											<a href="">I  </a>
-											<a href="">II  </a>
-										  </td>
+												<tr>
+													<td rowspan="2">FSAR</td>
+													<td>3</td>
+													<td><a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/taxi_3way_1shot/train_knowbase_1e-4_finegym_ins/save_50.pth">52.10</a></td>
+													<td><a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/taxi_3way_3shot/train_knowbase_1e-4_finegym_ins/save_50.pth">63.10</a></td>
+													<td><a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/taxi_3way_5shot/train_knowbase_1e-4_finegym_ins/save_50.pth">64.30</a></td>
+													<td>60.90
+														<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_3way_1shot/train_knowbase_1e-4_finegym_ins/save_49.7z.001">I  </a>
+														<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_3way_1shot/train_knowbase_1e-4_finegym_ins/save_49.7z.002">II  </a>
+													</td>  
+													<td>74.20
+														<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_3way_3shot/train_knowbase_1e-4_finegym_ins/save_50.7z.001">I  </a>
+														<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_3way_3shot/train_knowbase_1e-4_finegym_ins/save_50.7z.002">II  </a>
+													</td>
+													<td>82.80
+														<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_3way_5shot/train_knowbase_1e-4_finegym_ins/save_52.7z.001">I  </a>
+														<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_3way_5shot/train_knowbase_1e-4_finegym_ins/save_52.7z.002">II  </a>
+													</td>
 
+												
+													<tr>
+														<td>5</td>
+														<td><a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/taxi_5way_1shot/train_knowbase_1e-4_finegym_ins/save_50.pth">38.80</a></td>
+														<td><a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/taxi_5way_3shot/train_knowbase_1e-4_finegym_ins/save_50.pth">47.50</a></td>
+														<td><a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/taxi_5way_5shot/train_knowbase_1e-4_finegym_ins/save_50.pth">50.70</a></td>
+														<td>49.20
+															<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_5way_1shot/train_knowbase_1e-4_finegym_ins/save_50.7z.001">I  </a>
+															<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_5way_1shot/train_knowbase_1e-4_finegym_ins/save_50.7z.002">II  </a>									
+														</td>
+														<td>67.40
+															<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_5way_3shot/train_knowbase_1e-4_finegym_ins/save_50.7z.001">I  </a>
+															<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_5way_3shot/train_knowbase_1e-4_finegym_ins/save_50.7z.002">II  </a>
+														</td>
+														<td>73.40
+															<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_5way_5shot/train_knowbase_1e-4_finegym_ins/save_50.7z.001">I  </a>
+															<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_5way_5shot/train_knowbase_1e-4_finegym_ins/save_50.7z.002">II  </a>
+														</td>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
 
-
-
-										  <tr>
-											<td rowspan="2">FSAR</td>
-											<td>3</td>
-											<td><a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/taxi_3way_1shot/train_knowbase_1e-4_finegym_ins/save_50.pth">52.10</a></td>
-											<td><a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/taxi_3way_3shot/train_knowbase_1e-4_finegym_ins/save_50.pth">63.10</a></td>
-											<td><a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/taxi_3way_5shot/train_knowbase_1e-4_finegym_ins/save_50.pth">64.30</a></td>
-											<td>60.90
-												<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_3way_1shot/train_knowbase_1e-4_finegym_ins/save_49.7z.001">I  </a>
-												<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_3way_1shot/train_knowbase_1e-4_finegym_ins/save_49.7z.002">II  </a>
-											</td>  
-											<td>74.20
-												<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_3way_3shot/train_knowbase_1e-4_finegym_ins/save_50.7z.001">I  </a>
-												<a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_3way_3shot/train_knowbase_1e-4_finegym_ins/save_50.7z.002">II  </a>
-											</td>
-											<td>82.80
-											  <a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_3way_5shot/train_knowbase_1e-4_finegym_ins/save_52.7z.001">I  </a>
-											  <a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_3way_5shot/train_knowbase_1e-4_finegym_ins/save_52.7z.002">II  </a>
-											</td>
-
-										  
-  
-										  <tr>
-											<td>5</td>
-											<td><a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/taxi_5way_1shot/train_knowbase_1e-4_finegym_ins/save_50.pth">38.80</a></td>
-											<td><a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/taxi_5way_3shot/train_knowbase_1e-4_finegym_ins/save_50.pth">47.50</a></td>
-											<td><a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/taxi_5way_5shot/train_knowbase_1e-4_finegym_ins/save_50.pth">50.70</a></td>
-											<td>49.20
-											  <a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_5way_1shot/train_knowbase_1e-4_finegym_ins/save_50.7z.001">I  </a>
-											  <a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_5way_1shot/train_knowbase_1e-4_finegym_ins/save_50.7z.002">II  </a>									
-											</td>
-											<td>67.40
-											  <a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_5way_3shot/train_knowbase_1e-4_finegym_ins/save_50.7z.001">I  </a>
-											  <a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_5way_3shot/train_knowbase_1e-4_finegym_ins/save_50.7z.002">II  </a>
-											</td>
-											<td>73.40
-											  <a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_5way_5shot/train_knowbase_1e-4_finegym_ins/save_50.7z.001">I  </a>
-											  <a href="https://github.com/Yanc3113/TADD/blob/main/benchmark/FSAR/checkpoints/platform_5way_5shot/train_knowbase_1e-4_finegym_ins/save_50.7z.002">II  </a>
-											</td>
-										  
-
-
-
-							  </div>
-							
-
-
-							<!-- <h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
 						</section>
-
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Primary</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button large">Large</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button primary fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button primary disabled">Primary</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
-
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<select name="demo-category" id="demo-category">
-											<option value="">- Category -</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section> -->
-
-						<!-- <section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section> -->
-
-					</section>
-				
-
-			</div>
+					</div>
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -1035,7 +1111,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 					</ul>
 					<ul class="copyright">
-						<!-- <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+						<!-- <li>© Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
 					</ul>
 				</div>
 			</footer>
