@@ -1,0 +1,60 @@
+item {
+  name: "Obstructing_Driver's_View"
+  id: 15
+}
+item {
+  name: "Not_Wearing_Seatbelt"
+  id: 1
+}
+item {
+  name: "Physical_Contact_with_Driver"
+  id: 2
+}
+item {
+  name: "Driver_on_the_Phone"
+  id: 3
+}
+item {
+  name: "Front_Passenger_Leaning_Out_of_Window"
+  id: 4
+}
+item {
+  name: "Back_Seat_Quarrel"
+  id: 5
+}
+item {
+  name: "Back_Seat_Passenger_Leaning_Out_of_Window"
+  id: 6
+}
+item {
+  name: "Overloading"
+  id: 7
+}
+item {
+  name: "Fallen_Package"
+  id: 8
+}
+item {
+  name: "Dropped_Earphones"
+  id: 9
+}
+item {
+  name: "Dropped_Phone"
+  id: 10
+}
+item {
+  name: "Dropped_Wallet"
+  id: 11
+}
+item {
+  name: "Obstructed_Rearview_Mirror"
+  id: 12
+}
+item {
+  name: "Grabbing_the_Steering_Wheel"
+  id: 13
+}
+item {
+  name: "Dropped_Document_Packet"
+  id: 14
+}

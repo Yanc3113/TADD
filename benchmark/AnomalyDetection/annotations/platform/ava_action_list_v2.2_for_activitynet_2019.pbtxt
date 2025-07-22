@@ -1,0 +1,56 @@
+item {
+  name: "chat_block_blindway"
+  id: 1
+}
+item {
+  name: "chat_block_way"
+  id: 2
+}
+item {
+  name: "rely_railing"
+  id: 3
+}
+item {
+  name: "phone_block_way"
+  id: 4
+}
+item {
+  name: "phone_block_blindway"
+  id: 5
+}
+item {
+  name: "fire_fall"
+  id: 6
+}
+item {
+  name: "fire_not_yellow_zone"
+  id: 7
+}
+item {
+  name: "fire_askew"
+  id: 8
+}
+item {
+  name: "fire_miss"
+  id: 9
+}
+item {
+  name: "quarrel"
+  id: 10
+}
+item {
+  name: "run"
+  id: 11
+}
+item {
+  name: "missing_packet"
+  id: 12
+}
+item {
+  name: "missing_drink"
+  id: 13
+}
+item {
+  name: "s_track"
+  id: 14
+}
