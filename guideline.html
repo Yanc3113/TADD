@@ -32,7 +32,7 @@
 						<h2>Guideline<br />
 						</h2>
 					</header>
-					<p>Welcome to the TADD repository &gt;_&lt; <br />
+					<p>Welcome to the TADD repository >_< <br />
 						All pretrained checkpoints are available through the button below.
 					</p>
 					<ul class="actions">
@@ -103,9 +103,9 @@
 						  <li>
 							<strong>Launch training or evaluation</strong><br />
 							Use the following command to start evaluation:<br />
-							<code>bash tools/dist_test.sh &lt;config_file&gt; &lt;checkpoint_path&gt; &lt;num_gpus&gt; --eval top_k_accuracy</code><br />
+							<code>bash tools/dist_test.sh <config_file> <checkpoint_path> <num_gpus> --eval top_k_accuracy</code><br />
 							Or for training:<br />
-							<code>bash tools/dist_train.sh &lt;config_file&gt; &lt;num_gpus&gt;</code>
+							<code>bash tools/dist_train.sh <config_file> <num_gpus></code>
 						  </li><br />
 						</ol>
 						
@@ -290,6 +290,101 @@
 					</ul>
 				</section>
 				
+<section id="four">
+	<header class="major">
+		<h3>Abnormal Detection Benchmark<br />
+		</h3>
+	</header>
+	<p>
+		To conduct abnormal detection benchmarks on the TADD dataset using STMixer, please follow the official instructions below:
+	</p>
+	
+	<ol>
+		<li>
+			<strong>Clone the STMixer repository</strong><br />
+			Clone the official STMixer repository to your local machine:<br />
+			<code>git clone https://github.com/MCG-NJU/STMixer.git</code>
+		</li><br />
+		
+		<li>
+			<strong>Prepare the environment</strong><br />
+			Install the required dependencies as outlined in the STMixer documentation (compatible with PyTorch, CUDA, etc.).
+		</li><br />
+		
+		<li>
+			<strong>Download and configure YAML files</strong><br />
+			We provide officially curated YAML configuration files tailored for TADD abnormal detection:
+			<ul>
+				<li><a href="https://github.com/MCG-NJU/STMixer/tree/main/configs/tadd_abnormal" target="_blank">TADD Abnormal Detection YAMLs</a> – Designed for detecting anomalies in cabin and platform settings</li>
+			</ul>
+			Download these files and adjust the following key parameters to suit your setup:
+			<ul>
+				<li><code>data_root</code>: Path to your local TADD dataset directory</li>
+				<li><code>batch_size</code>: Number of samples per batch (e.g., 8, 16) based on your hardware capacity</li>
+				<li><code>num_workers</code>: Number of workers for data loading (e.g., 4 or 8 depending on CPU cores)</li>
+				<li><code>pretrained</code>: Path to pretrained weights (optional, use checkpoints from our website)</li>
+			</ul>
+			Ensure the YAMLs are compatible with TADD’s video directory and label format.
+		</li><br />
+		
+		<li>
+			<strong>Modify configuration for TADD</strong><br />
+			Within the selected YAML file, please update the following parameters:
+			<ul>
+				<li><code>data_root</code>: Set to your local TADD dataset directory</li>
+				<li><code>ann_file_train</code> / <code>ann_file_val</code>: Set to the paths of the downloaded TADD annotation files from the GitHub repository below</li>
+				<li><code>pretrained</code>: Point to the correct checkpoint from the URL below if using our weights</li>
+				<li><code>input_size</code>: Adjust to match TADD video resolution (e.g., 224x224)</li>
+			</ul>
+		</li><br />
+		
+		<li>
+			<strong>Download pretrained weights (optional)</strong><br />
+			You may use the pretrained weights provided on our project website:<br />
+			<a href="https://yanc3113.github.io/TADD/checkpoints.html" target="_blank">https://yanc3113.github.io/TADD/checkpoints.html</a><br />
+			These checkpoints are compatible with the STMixer configurations listed above.
+		</li><br />
+		
+		<li>
+			<strong>Download TADD annotation files</strong><br />
+			Official annotation files for abnormal detection are hosted on GitHub:<br />
+			<a href="https://github.com/Yanc3113/TADD/tree/main/benchmark/AnomalyDetection/annotations" target="_blank">
+				https://github.com/Yanc3113/TADD/.../AnomalyDetection/annotations
+			</a><br />
+			These files include labels for normal and abnormal events within TADD. Developers are encouraged to customize the labels based on their specific anomaly detection needs.
+		</li><br />
+		
+		<li>
+			<strong>Launch training or evaluation</strong><br />
+			Use the following command to start evaluation:<br />
+			<code>python tools/test.py --config configs/tadd_abnormal/cabin_abnormal.yaml --checkpoint path/to/checkpoint.pth</code><br />
+			Or for training:<br />
+			<code>python tools/train.py --config configs/tadd_abnormal/cabin_abnormal.yaml</code>
+		</li><br />
+		
+		<li>
+			<strong>Hardware & environment</strong><br />
+			All experiments were conducted using:
+			<ul>
+				<li><strong>4 × NVIDIA A100 (L20)</strong> GPUs</li>
+				<li>CUDA ≥ 11.6, PyTorch ≥ 1.12</li>
+				<li>Python ≥ 3.8</li>
+			</ul>
+			Multi-GPU training is supported via <code>torch.distributed.launch</code> or <code>torchrun</code> interfaces.
+		</li><br />
+	</ol>
+	
+	<p>
+		We encourage the community to adapt and extend the STMixer model for custom abnormal detection tasks using the TADD dataset.
+	</p>
+	
+	<ul class="actions">
+		<!-- <li><a href="#" class="button">Learn More</a></li> -->
+	</ul>
+	<ul class="actions">
+		<li><a href="index.html" class="button">Home</a></li>
+	</ul>
+</section>
 
 				<!-- Three -->
 					<!-- <section id="three">
@@ -639,7 +734,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
 								</div>
 							</div>
-							<h5>Left &amp; Right</h5>
+							<h5>Left & Right</h5>
 							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
 							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
 						</section>
@@ -661,7 +756,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 					</ul>
 					<ul class="copyright">
-						<!-- <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+						<!-- <li>© Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
 					</ul>
 				</div>
 			</footer>

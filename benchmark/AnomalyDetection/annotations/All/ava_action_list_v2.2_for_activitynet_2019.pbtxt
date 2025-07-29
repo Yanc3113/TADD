@@ -1,0 +1,116 @@
+item {
+  name: "Obstructing_Driver's_View"
+  id: 15
+}
+item {
+  name: "Not_Wearing_Seatbelt"
+  id: 1
+}
+item {
+  name: "Physical_Contact_with_Driver"
+  id: 2
+}
+item {
+  name: "Driver_on_the_Phone"
+  id: 3
+}
+item {
+  name: "Front_Passenger_Leaning_Out_of_Window"
+  id: 4
+}
+item {
+  name: "Back_Seat_Quarrel"
+  id: 5
+}
+item {
+  name: "Back_Seat_Passenger_Leaning_Out_of_Window"
+  id: 6
+}
+item {
+  name: "Overloading"
+  id: 7
+}
+item {
+  name: "Fallen_Package"
+  id: 8
+}
+item {
+  name: "Dropped_Earphones"
+  id: 9
+}
+item {
+  name: "Dropped_Phone"
+  id: 10
+}
+item {
+  name: "Dropped_Wallet"
+  id: 11
+}
+item {
+  name: "Obstructed_Rearview_Mirror"
+  id: 12
+}
+item {
+  name: "Grabbing_the_Steering_Wheel"
+  id: 13
+}
+item {
+  name: "Dropped_Document_Packet"
+  id: 14
+}
+item {
+  name: "chat_block_blindway"
+  id: 16
+}
+item {
+  name: "chat_block_way"
+  id: 17
+}
+item {
+  name: "rely_railing"
+  id: 18
+}
+item {
+  name: "phone_block_way"
+  id: 19
+}
+item {
+  name: "phone_block_blindway"
+  id: 20
+}
+item {
+  name: "fire_fall"
+  id: 21
+}
+item {
+  name: "fire_not_yellow_zone"
+  id: 22
+}
+item {
+  name: "fire_askew"
+  id: 23
+}
+item {
+  name: "fire_miss"
+  id: 24
+}
+item {
+  name: "quarrel"
+  id: 25
+}
+item {
+  name: "run"
+  id: 26
+}
+item {
+  name: "missing_packet"
+  id: 27
+}
+item {
+  name: "missing_drink"
+  id: 28
+}
+item {
+  name: "s_track"
+  id: 29
+}
