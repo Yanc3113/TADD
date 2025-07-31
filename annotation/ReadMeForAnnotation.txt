@@ -1,5 +1,5 @@
 In order to make it concise in the procedure, we make the label easier to be read. The corresponding meaning is shown below:
-see more details in our article.
+see more details in our article. Corresponding annotation files are in TADD\benchmark.
 
 Platform:
 Blocking BW due to Chatting  →  chat_block_blindway
